@@ -3,7 +3,6 @@
             // Language: C++
             // Link: https://leetcode.com/problems/robot-collisions/
 
-            }
             else{
                 while(!st.empty() && healths[id]
 >0){
