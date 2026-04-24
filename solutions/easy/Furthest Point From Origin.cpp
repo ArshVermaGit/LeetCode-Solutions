@@ -9,13 +9,20 @@ using namespace std;
 class Solution {
 public:
     int furthestDistanceFromOrigin(string 
-        int l = 0, r = 0, u = 0;
+moves) {
+        int left = 0, right = 0;
         for(char c : moves) {
-            if(c == 'L') l++;
-            else if(c == 'R') r++;
-            else u++;
+            if(c == 'L') {
+                left--;
+                right--;
+            } else if(c == 'R') {
+                left++;
+                right++;
+            } else {
+                left--;
+                right++;
+            }
         }
-        return abs(r - l) + u;
+        return max(abs(left), abs(right));
     }
 };
-moves) {
