@@ -3,24 +3,36 @@
             // Language: C++
             // Link: https://leetcode.com/problems/copy-list-with-random-pointer/
 
-#include <bits/stdc++.h>
 using namespace std;
 
 class Solution {
 public:
-    unordered_map<Node*, Node*> mp;
-    
-    Node* dfs(Node* head) {
-        if(!head) return NULL;
-        if(mp.count(head)) return mp[head];
-        Node* node = new Node(head->val);
-        mp[head] = node;
-        node->next = dfs(head->next);
-        node->random = dfs(head->random);
-        return node;
-    }
-    
     Node* copyRandomList(Node* head) {
-        return dfs(head);
+        if(!head) return NULL;
+        vector<Node*> oldNodes;
+        unordered_map<Node*, int> index;
+        Node* curr = head;
+        int i = 0;
+        while(curr) {
+            oldNodes.push_back(curr);
+            index[curr] = i++;
+            curr = curr->next;
+        }
+        vector<Node*> newNodes(oldNodes.size());
+        for(int i = 0; i < oldNodes.size(); i
+            newNodes[i] = new Node(oldNodes[i]
+++) {
+->val);
+        }
+        for(int i = 0; i < oldNodes.size(); i
+++) {
+            if(oldNodes[i]->next)
+                newNodes[i]->next = newNodes
+[index[oldNodes[i]->next]];
+            if(oldNodes[i]->random)
+                newNodes[i]->random = newNodes
+[index[oldNodes[i]->random]];
+        }
+        return newNodes[0];
     }
 };
