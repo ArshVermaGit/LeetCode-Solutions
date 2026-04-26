@@ -3,12 +3,12 @@
             // Language: C++
             // Link: https://leetcode.com/problems/detect-cycles-in-2d-grid/
 
-                            vis[nx][ny] = 1;
-                            q.push({nx, ny, x, y});
-                        } else if(nx != px || ny != py) {
-                            return true;
-                        }
-                    }
+                if(i + 1 < m && grid[i][j] == grid[i+1][j]) {
+                    if(unite(id, (i+1)*n + j, parent)) return true;
+                }
+                
+                if(j + 1 < n && grid[i][j] == grid[i][j+1]) {
+                    if(unite(id, i*n + j+1, parent)) return true;
                 }
             }
         }
