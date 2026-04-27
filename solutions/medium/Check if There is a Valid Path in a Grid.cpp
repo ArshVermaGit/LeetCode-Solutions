@@ -3,15 +3,15 @@
             // Language: C++
             // Link: https://leetcode.com/problems/check-if-there-is-a-valid-path-in-a-grid/
 
-                if(nx<0||ny<0||nx>=m||ny>=n||vis[nx][ny]) continue;
-                for(auto &back:d[g[nx][ny]]){
-                    if(nx+back[0]==x && ny+back[1]==y){
-                        vis[nx][ny]=true;
-                        q.push({nx,ny});
-                    }
+                    if(dfs(nx,ny,g,vis)) return true;
                 }
             }
         }
         return false;
+    }
+    bool hasValidPath(vector<vector<int>>& g) {
+        int m=g.size(), n=g[0].size();
+        vector<vector<bool>> vis(m,vector<bool>(n,false));
+        return dfs(0,0,g,vis);
     }
 };
