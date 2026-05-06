@@ -1,23 +1,23 @@
-# 🚀 Arsh Verma — LeetCode Solutions
+# Arsh Verma — LeetCode Solutions
 
 Welcome to my collection of **LeetCode problem solutions**!
 This repository documents my journey through **Data Structures & Algorithms**, focused on improving problem-solving skills and preparing for technical interviews.
 
 ---
 
-## 🧠 About This Repository
+## About This Repository
 
-* 📚 Solutions to LeetCode problems
-* 🧩 Organized by difficulty and topic
-* ⚡ Written primarily in **C++**
-* 🎯 Focused on interview preparation and DSA mastery
-* 🔄 Continuously updated as I solve more problems
+* Solutions to LeetCode problems
+* Organized by difficulty and topic
+* Written primarily in **C++**
+* Focused on interview preparation and DSA mastery
+* Continuously updated as I solve more problems
 
 This repo serves as both a **learning archive** and a **progress tracker**.
 
 ---
 
-## 🗂 Repository Structure
+## Repository Structure
 
 ```
 leetcode-solutions/
@@ -36,10 +36,10 @@ Each solution typically includes:
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
-* 💻 Language: C++
-* 🧮 Concepts:
+* Language: C++
+* Concepts:
 
   * Arrays
   * Strings
@@ -53,7 +53,7 @@ Each solution typically includes:
 
 ---
 
-## 📈 Goals
+## Goals
 
 * Strengthen core algorithmic thinking
 * Build consistency in daily problem solving
@@ -62,7 +62,7 @@ Each solution typically includes:
 
 ---
 
-## ⭐ Why This Repo Exists
+## Why This Repo Exists
 
 Practicing DSA is not just about solving problems — it's about:
 
@@ -75,7 +75,7 @@ This repository reflects that journey.
 
 ---
 
-## 📱 Connect with Me
+## Connect with Me
 
 I'd love to hear your feedback or discuss potential collaborations!
 
