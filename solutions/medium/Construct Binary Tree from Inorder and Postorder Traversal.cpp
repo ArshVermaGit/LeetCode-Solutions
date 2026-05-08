@@ -3,16 +3,15 @@
             // Language: C++
             // Link: https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/
 
+    TreeNode* buildTree(vector<int>& inorder, vector<int>& postorder) {
+        int n = inorder.size();
 
-        int mid = pos[val];
+        for (int i = 0; i < n; i++) {
+            mp[inorder[i]] = i;
+        }
 
-class Solution {
-public:
-    unordered_map<int, int> pos;
-    int idx;
+        postIdx = n - 1;
 
-    TreeNode* build(vector<int>& inorder, vector<int>& postorder, int l, int r) {
-        if (l > r) return NULL;
-
-        int val = postorder[idx--];
-        TreeNode* root = new TreeNode(val);
+        return dfs(inorder, postorder, 0, n - 1);
+    }
+};
